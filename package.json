@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "homepage": "https://LLnCSoftware.github.io/hello-zipcode/",
+    "homepage": "https://LLnCSoftware.github.io/hello-zipcode/"
   },
   "eslintConfig": {
     "extends": [
