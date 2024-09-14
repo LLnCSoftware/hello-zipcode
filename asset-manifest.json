@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.860f11ab.css",
-    "main.js": "/static/js/main.4d51897e.js",
-    "static/js/453.9491fb3f.chunk.js": "/static/js/453.9491fb3f.chunk.js",
-    "index.html": "/index.html",
-    "main.860f11ab.css.map": "/static/css/main.860f11ab.css.map",
-    "main.4d51897e.js.map": "/static/js/main.4d51897e.js.map",
-    "453.9491fb3f.chunk.js.map": "/static/js/453.9491fb3f.chunk.js.map"
+    "main.css": "/hello-zipcode/static/css/main.860f11ab.css",
+    "main.js": "/hello-zipcode/static/js/main.6c8e8dae.js",
+    "static/js/453.9491fb3f.chunk.js": "/hello-zipcode/static/js/453.9491fb3f.chunk.js",
+    "index.html": "/hello-zipcode/index.html",
+    "main.860f11ab.css.map": "/hello-zipcode/static/css/main.860f11ab.css.map",
+    "main.6c8e8dae.js.map": "/hello-zipcode/static/js/main.6c8e8dae.js.map",
+    "453.9491fb3f.chunk.js.map": "/hello-zipcode/static/js/453.9491fb3f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.860f11ab.css",
-    "static/js/main.4d51897e.js"
+    "static/js/main.6c8e8dae.js"
   ]
 }
