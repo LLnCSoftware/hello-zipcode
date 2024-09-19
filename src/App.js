@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import { parseCSV, concatenateHelloValues } from './model';
+import helloData from './assets/nv';
+
+console.log('helloData 1', helloData);
+
+function concatenateHelloValues(zipCode) {
+  // Filter rows by zip code and exclude 'NA'
+
+  const filteredRows = helloData.filter(row => row.Zipcode === zipCode && row.Hello !== 'NA');
+  // Extract the 'hello' values
+  const helloValues = filteredRows.map(row => row.Hello);
+
+  // Concatenate with '|'
+  return helloValues.join('|');
+}
 
 function App() {
   const [zipcode, setZipcode] = useState('');
-  const [isButtonActive, setIsButtonActive] = useState(false);
+  //const [isButtonActive, setIsButtonActive] = useState(false);
   const [howToSayHello, setHowToSayHello] = useState("");
 
-  // Code to execute before button is live
-  useEffect(() => {
-    // Example: Fetch some data or perform a check
-    // Simulating a fetch with a timeout
-    setTimeout(() => {
-      console.log('Pre-execution code start.');
-      parseCSV('assets/nv.json')
-        .then(data => { console.log(data) });
-
-      console.log('Pre-execution code complete.');
-      setIsButtonActive(true); // Enable the button after the code completes
-    }, 2000); // Adjust time as needed for your pre-execution code
-  }, []); // Empty dependency array means this runs once on mount
 
   const handleZipcodeChange = (event) => {
     setZipcode(event.target.value);
@@ -27,10 +27,13 @@ function App() {
 
   const handleGetHelloClick = () => {
     console.log('Get Hello with Zipcode:', zipcode);
-    // Implement what happens when "Get Hello" is clicked
 
+    if (zipcode === "") {
+      setHowToSayHello("Please enter a valid zip code 11111.");
+      return;
+    }
     setHowToSayHello(concatenateHelloValues(JSON.parse(zipcode)));
-    
+
     console.log('concatenateHelloValues', howToSayHello);
 
   };
@@ -39,11 +42,11 @@ function App() {
     <div className="App">
       <header className="App-header">
 
-      <div className="logo-container">
-        <img src="F6_SofterSeal_MutedGreen.webp" alt="Logo"  />
-      </div>
+        <div className="logo-container">
+          <img src="F6_SofterSeal_MutedGreen.webp" alt="Logo" />
+        </div>
 
-        <input className="main-input" 
+        <input className="main-input"
           type="text"
           placeholder="Enter Zipcode"
           value={zipcode}
@@ -52,7 +55,7 @@ function App() {
           title="Enter a 5-digit US ZIP code"
           maxLength="5"
         />
-        <button className="main-button" onClick={handleGetHelloClick} disabled={!isButtonActive}>
+        <button className="main-button" onClick={handleGetHelloClick} >
           Get Hello
         </button>
         <div className="say-report" id="hello-values"><em>{howToSayHello || "No data for this zip code."}</em></div>
@@ -62,5 +65,4 @@ function App() {
 }
 
 export default App;
-
 
