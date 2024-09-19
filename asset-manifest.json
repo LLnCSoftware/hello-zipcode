@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/hello-zipcode/static/css/main.860f11ab.css",
-    "main.js": "/hello-zipcode/static/js/main.35f32701.js",
+    "main.js": "/hello-zipcode/static/js/main.ec976f3f.js",
     "static/js/453.9491fb3f.chunk.js": "/hello-zipcode/static/js/453.9491fb3f.chunk.js",
     "index.html": "/hello-zipcode/index.html",
     "main.860f11ab.css.map": "/hello-zipcode/static/css/main.860f11ab.css.map",
-    "main.35f32701.js.map": "/hello-zipcode/static/js/main.35f32701.js.map",
+    "main.ec976f3f.js.map": "/hello-zipcode/static/js/main.ec976f3f.js.map",
     "453.9491fb3f.chunk.js.map": "/hello-zipcode/static/js/453.9491fb3f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.860f11ab.css",
-    "static/js/main.35f32701.js"
+    "static/js/main.ec976f3f.js"
   ]
 }
