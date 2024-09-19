@@ -41,7 +41,7 @@ function App() {
       <header className="App-header">
 
         <div className="logo-container">
-          <img src="F6_SofterSeal_MutedGreen.webp" alt="Logo" />
+          <img src="hello-zipcode/F6_SofterSeal_MutedGreen.webp" alt="Logo" />
         </div>
 
         <input className="main-input"
