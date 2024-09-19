@@ -13,7 +13,7 @@ function App() {
     // Simulating a fetch with a timeout
     setTimeout(() => {
       console.log('Pre-execution code start.');
-      parseCSV('nv.json')
+      parseCSV('assets/nv.json')
         .then(data => { console.log(data) });
 
       console.log('Pre-execution code complete.');

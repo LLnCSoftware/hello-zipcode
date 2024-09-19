@@ -18,7 +18,9 @@ export async function parseCSV(url) {
 export function concatenateHelloValues(zipCode) {
     // Filter rows by zip code and exclude 'NA'
 
-    console.log("helloData ",  helloData);
+    if (zipCode === "") {
+        return "";
+    }
 
     const filteredRows = helloData.filter(row => row.Zipcode === zipCode && row.Hello !== 'NA');
 
