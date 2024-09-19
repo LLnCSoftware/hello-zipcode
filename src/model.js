@@ -28,7 +28,8 @@ export function concatenateHelloValues(zipCode) {
     // Concatenate with '|'
     const concatenatedValues = helloValues.join('|');
 
-    console.log("concatenatedValues: ", concatenatedValues);
+    console.log("concatenatedValues len: ", concatenatedValues.length);
+    console.log(`concatenatedValues: ${concatenatedValues || "No data"} `, concatenatedValues.length);
 
     return concatenatedValues;
 } 

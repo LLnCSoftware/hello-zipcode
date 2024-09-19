@@ -55,7 +55,7 @@ function App() {
         <button className="main-button" onClick={handleGetHelloClick} disabled={!isButtonActive}>
           Get Hello
         </button>
-        <div className="say-report" id="hello-values"><em>{howToSayHello}</em></div>
+        <div className="say-report" id="hello-values"><em>{howToSayHello || "No data for this zip code."}</em></div>
       </header>
     </div>
   );
