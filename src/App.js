@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 import helloData from './assets/nv';
 
-console.log('helloData 1', helloData);
-
 function concatenateHelloValues(zipCode) {
   // Filter rows by zip code and exclude 'NA'
 
@@ -28,8 +26,8 @@ function App() {
   const handleGetHelloClick = () => {
     console.log('Get Hello with Zipcode:', zipcode);
 
-    if (zipcode === "") {
-      setHowToSayHello("Please enter a valid zip code 11111.");
+    if (!zipcode) {
+      setHowToSayHello("");
       return;
     }
     setHowToSayHello(concatenateHelloValues(JSON.parse(zipcode)));
@@ -58,7 +56,7 @@ function App() {
         <button className="main-button" onClick={handleGetHelloClick} >
           Get Hello
         </button>
-        <div className="say-report" id="hello-values"><em>{howToSayHello || "No data for this zip code."}</em></div>
+        { zipcode ? (<div className="say-report" id="hello-values"><em>{howToSayHello || "No data for this zip code."}</em></div>) : null}
       </header>
     </div>
   );
